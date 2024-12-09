@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Clientes</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'lista_clientes.css' %}">
+</head>
+
+<body>
+<div id="encabezado">
+    <img src="{% static 'logo.png' %}" alt="Descripción de la imagen" id="imagen">
+    <h1 id="estilo">ESTILO QUE HABLA POR TI</h1>
+
+</div>
+<header>
+    <h1>Lista de Clientes</h1>
+</header>
+
+<main>
+    <ul  class="lista-citas">
+        {% for cliente in clientes %}
+        <li class="cita-item"><span class="nombre">Nombre de clientes: </span>{{ cliente.nombre }} <br> <span class="nombre">Telefono de clientes: </span>{{ cliente.telefono }}</li>
+        {% endfor %}
+    </ul>
+</main>
+</body>
+
+<a href="{% url 'index' %}" id="volver" >Volver al Índice</a>
+
+</html>

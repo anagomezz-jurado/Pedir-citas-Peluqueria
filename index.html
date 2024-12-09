@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Índice</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'index.css' %}">
+
+</head>
+
+<body>
+<div id="encabezado">
+    <img src="{% static 'logo.png' %}" alt="Descripción de la imagen" id="imagen">
+    <h1 id="estilo">ESTILO QUE HABLA POR TI</h1>
+
+</div>
+
+{% include 'menu.html' %}
+<br>
+<div id="menu">
+    <li><a href="#Somos">Quienes Somos</a></li>
+    <li><a href="#Servicios">Servicios</a></li>
+    <li><a href="#Caracteristicas">Características especiales</a></li>
+    <li><a href="#Seguir">Seguir</a></li>
+    <li><a href="#Contactos">Contactos</a></li>
+</div>
+
+<div class="enlaces">
+
+    <div id="Somos" class="div">
+        <section>
+            <h2>Quienes somos</h2>
+            <div>
+                <p>Somos los mejores en nuestro campo, y todo gracias a las increíbles relaciones que <br> hemos establecido con nuestros clientes. A diferencia de nuestros competidores,
+                    <br> invertimos en desarrollar una conexióon personal con todos y cada uno de nuestros <br> clientes, brindándoles un servicio de calidad y estando disponibles las 24 horas del día,
+                    <br>los 7 días de la semana ¡Estamos ansiosos por conocerte </p>
+                <p>Nuestro servicio es tanto para hombres como para mujeres</p>
+            </div>
+        </section>
+    </div>
+
+    <div id="Servicios"  class="div">
+        <section>
+            <h2>Nuestros servicios</h2>
+            <div class="columnas">
+                <div>
+                    <h3>Mujeres</h3>
+                    <p>Los serivcios que tenemos para mujeres son estos:</p>
+                    <div class="separar">
+                        <div class="separar">
+                            <h4>CORTES DE PELO -- 7€</h4>
+                            <img src="{% static 'corte.jpg' %}" alt="Descripción de la imagen" class="imagen">
+                        </div>
+                        <div class="separar">
+                            <h4>COLORACIÓN -- 45€</h4>
+                            <img src="{% static 'coloracion.jpg' %}" alt="Descripción de la imagen" class="imagen" >
+                        </div>
+                        <div class="separar">
+                            <h4>PEINADOS -- 15€</h4>
+                            <img src="{% static 'peinados.jpg' %}" alt="Descripción de la imagen" class="imagen" >
+                        </div>
+                        <div class="separar">
+                            <h4>TRATAMIENTOS PARA EL CABELLO -- 22€</h4>
+                            <img src="{% static 'tratamientos.jpg' %}" alt="Descripción de la imagen" class="imagen" >
+                        </div>
+                        <div class="separar">
+                            <h4>EXTENSIONES DE CABELLO -- 70€</h4>
+                            <img src="{% static 'extensiones.jpg' %}" alt="Descripción de la imagen" class="imagen" >
+                        </div>
+                    </div>
+
+                </div>
+
+                <div>
+                    <h3>Hombres</h3>
+                    <p>Los serivcios que tenemos para hombres son estos:</p>
+                    <div class="separar">
+                        <div class="separar">
+                            <h4>CORTE BÁSICO -- 5€</h4>
+                            <img src="{% static 'corte1.jpg' %}" alt="Descripción de la imagen" class="imagen">
+                        </div>
+                        <div class="separar">
+                            <h4>CORTE DE PELO + ARREGLO DE BARBA -- 10€</h4>
+                            <img src="{% static 'corte_barba.jpg' %}" alt="Descripción de la imagen" class="imagen">
+                        </div>
+                        <div class="separar">
+                            <h4>ARREGLO DE BARBA -- 5€</h4>
+                            <img src="{% static 'barba.jpg' %}" alt="Descripción de la imagen" class="imagen">
+                        </div>
+                        <div class="separar">
+                            <h4>TINTE -- 20€</h4>
+                            <img src="{% static 'tinte.jpg' %}" alt="Descripción de la imagen" class="imagen">
+                        </div>
+                        <div class="separar">
+                            <h4>ASCENDENCIA DE TONO -- 25€</h4>
+                            <img src="{% static 'ascendencia.jpg' %}" alt="Descripción de la imagen" class="imagen">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+    <div id="Caracteristicas"  class="div">
+        <section>
+            <h2>Características especiales</h2>
+            <div class="col3">
+                <div>
+                    <img src="{% static 'calidad.png' %}" alt="Descripción de la imagen" class="imagen2" >
+                    <b>Mejor calidad</b>
+                    <p>Garantizamos tu <br> satisfacción</p>
+
+                </div>
+                <div>
+                    <img src="{% static 'reloj.png' %}" alt="Descripción de la imagen" class="imagen2" >
+                    <b>Soporte 24/7</b>
+                    <p>Nuestro soporte <br> telefonico está <br> siempre disponible <br> para usted</p>
+
+                </div>
+                <div>
+                    <img src="{% static 'trofeo.png' %}" alt="Descripción de la imagen" class="imagen2" >
+                    <b>Precio competitivo</b>
+                    <p>La mejor relación calidad-precio</p>
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="Seguir"  class="div">
+        <section>
+            <h2>Seguir</h2>
+            <li id="enlace">
+                <a href="https://www.facebook.com/?locale=es_ES"> <img src="{% static 'facebook.png' %}" alt="Descripción de la imagen"  class="enlace"></a>
+                <a href="https://www.instagram.com/"> <img src="{% static 'instagram.png' %}" alt="Descripción de la imagen"  class="enlace"></a>
+                <a href="https://twitter.com/?lang=es"> <img src="{% static 'x.png' %}" alt="Descripción de la imagen"  class="enlace"></a>
+                <a href="https://www.pinterest.es/"> <img src="{% static 'pinterest.png' %}" alt="Descripción de la imagen"  class="enlace"></a>
+            </li>
+        </section>
+    </div>
+    <div id="Contactos"  class="div">
+        <section>
+            <h2>Contáctanos</h2>
+            <p>¡Estamos aquó para ayudar! Envíenos cualquier pregunta que <br> tenga. Esperamos con interés escuchar de usted</p>
+            <div id="formulario">
+                <form action="/enviar_datos/" method="post">
+                    {% csrf_token %}
+
+
+                    <div id="lado">
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+                        <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos">
+                    </div>
+
+                    <div>
+                        <input type="email" id="correo" name="correo"  placeholder="Email">
+                    </div>
+                    <div>
+                        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Mensaje"></textarea>
+                    </div>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <div id="pie"  class="div">
+        <img src="{% static 'logo.png' %}" alt="Descripción de la imagen" id="imag">
+        <div></div>
+        <div id="ultimo">
+            <p> +34 605 35 49 83</p>
+            <p>peinateconmigo@gmail.com</p>
+            <p>14620 Avenida, Córdoba, España</p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+
+</html>

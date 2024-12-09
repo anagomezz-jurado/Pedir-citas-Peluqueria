@@ -1,0 +1,102 @@
+#encabezado{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+#estilo{
+    text-align: center;
+    color: #f89292;
+    font-size: 36px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    text-align: center;
+}
+h1{
+    text-align: center;
+    color: #555;
+    font-size: 18px;
+}
+
+.lista-citas {
+    list-style: none;
+    padding: 0;
+}
+
+.cita-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.nombre{
+    color: #45a049;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+#volver{
+    background-color: #f89292;
+    border-radius: 10px;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+@media(max-width: 600px){
+    #encabezado{
+        display: flex;
+        flex-direction: column;
+
+    }
+    #estilo{
+
+        font-size: 25px;
+
+    }
+
+    img{
+        width: 200px;
+        align-items: center;
+    }
+
+    h1{
+
+        font-size: 17px;
+    }
+
+    .lista-citas {
+        list-style: none;
+        padding: 0;
+    }
+
+
+    .nombre{
+        font-size: 10px;
+    }
+
+    ul {
+
+        font-size: 10px;
+
+    }
+
+}

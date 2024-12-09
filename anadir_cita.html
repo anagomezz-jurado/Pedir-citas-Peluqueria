@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Añadir Cita</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'anadir_cita.css' %}">
+</head>
+
+<body>
+
+<div id="encabezado">
+    <img src="{% static 'logo.png' %}" alt="Descripción de la imagen" id="imagen">
+    <h1 id="estilo">ESTILO QUE HABLA POR TI</h1>
+
+</div>
+
+<h1>Añadir Cita</h1>
+<form method="post" action="{% url 'anadir_cita' %}">
+    {% csrf_token %} <span class="nombre">
+     {{ formulario.as_p }}
+</span>
+
+    <button type="submit"  id="guardar">Guardar Cita</button>
+</form>
+
+<a href="{% url 'lista' %}" class="volver">Volver a la lista de citas</a>
+<a href="{% url 'index' %}" class="volver" >Volver al Índice</a>
+
+</body>
+</html>

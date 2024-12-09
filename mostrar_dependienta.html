@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Información de la Dependienta</title>
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'mostrar_dependienta.css' %}">
+
+
+</head>
+<body>
+
+<div id="encabezado">
+  <img src="{% static 'logo.png' %}" alt="Descripción de la imagen" id="imagen">
+  <h1 id="estilo">ESTILO QUE HABLA POR TI</h1>
+
+</div>
+
+<h1>Información de la Dependienta</h1>
+{% for dependienta in dependientas %}
+<p><span id="dependientes">Nombre de los dependientes: </span>{{ dependienta.nombre }}</p>
+{% endfor %}
+
+<a href="{% url 'index' %}" id="volver" >Volver al Índice</a>
+
+</body>
+</html>
+

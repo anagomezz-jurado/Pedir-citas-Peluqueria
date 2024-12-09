@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Citas</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'lista.css' %}">
+
+
+</head>
+<body>
+
+<div id="encabezado">
+    <img src="{% static 'logo.png' %}" alt="Descripción de la imagen" id="imagen">
+    <h1 id="estilo">ESTILO QUE HABLA POR TI</h1>
+
+</div>
+
+<p>Lista de Citas: {{ cliente.nombre }}</p>
+
+<ul class="lista-citas">
+    {% for cita in citas %}
+    <li class="cita-item">
+        <span> <span class="nombre">  Fecha: </span>{{ cita.fecha|date:"M d, Y" }}</span><br>
+        <span> <span class="nombre">  Hora: </span>{{ cita.hora }} </span><br>
+        <span> <span class="nombre">   Dependienta: </span>{{ cita.dependienta }}</span><br>
+        <span> <span class="nombre">   Nombre de Cliente: </span>
+           {% for cliente in cita.nombre.all %}
+            {{cliente.nombre}}
+              {% endfor %}
+        </span><br>
+
+    </li>
+    {% endfor %}
+
+</ul>
+<div  class="separar">
+    <a href= "{% url 'borrar_cita' %}?seleccionado={{cita.id}}" id="borrar">Borrar</a>
+
+</div>
+
+
+<div  class="separar">
+    <a href="{% url 'index' %}" id="volver" >Volver al Índice</a>
+
+</div>
+
+</body>
+</html>
